@@ -1,0 +1,120 @@
+:root{
+    --clr--primary--400:hsl(31, 77%, 52%);
+    --clr--primary--600:hsl(184, 100%, 22%);
+    --clr--primary--800:hsl(179, 100%, 13%);
+
+    --clr--neutral--100:hsla(0, 0%, 100%, 0.75);
+    --clr--neutral--200:hsl(0, 0%, 95%);
+
+    --ff--accent: Lexend Deca,sans-serif;
+    --ff--regular: Big Shoulders Display,sans-serif;
+
+    --fw--light:400;
+    --fw--bold:700;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cars{
+    padding: 2em;
+}
+
+.product__title{
+    padding: 0.8em 0.1em;
+    font-family: var(--ff--regular);
+}
+
+p{
+    padding-bottom: 4em;
+    font-family: var(--ff--accent);
+    line-height: 1.5;
+}
+
+.car_list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:1em 2em;
+    place-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sedan{
+    background-color: var(--clr--primary--400);
+    color: var(--clr--neutral--100);
+   
+}
+
+.suv{
+    background-color: var(--clr--primary--600);
+    color: var(--clr--neutral--100);
+}
+
+.luxury{
+    background-color: var(--clr--primary--800);
+    color: var(--clr--neutral--100);
+    
+}
+
+.link{
+    background-color: var(--clr--neutral--100);
+    padding: 0.75em 1.5em;
+    border-radius: 1.5em;
+    text-decoration: none;
+    font-family: var(--ff--accent);
+}
+.sedan_link{
+    color: var(--clr--primary--400);
+    border: 1px solid;
+}
+
+.suv_link{
+    color: var(--clr--primary--600);
+    border: 1px solid;
+}
+
+.luxury_link{
+    color: var(--clr--primary--800);
+    border: 1px solid;
+}
+
+.sedan_link:hover{
+    background-color: var(--clr--primary--400);
+    color: var(--clr--neutral--100);
+    border-color: var(--clr--neutral--100);
+}
+
+.suv_link:hover{
+    background-color: var(--clr--primary--600);
+    color: var(--clr--neutral--100);
+    border-color: var(--clr--neutral--100);
+}
+
+.luxury_link:hover{
+    background-color: var(--clr--primary--800);
+    color: var(--clr--neutral--100);
+    border-color: var(--clr--neutral--100);
+}
+
+@media(max-width:600px){
+    .car_list{
+        display: flex;
+        flex-flow: column ;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        min-height: 100vh;
+        margin: 1em;   
+    }
+}
